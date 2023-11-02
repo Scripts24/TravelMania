@@ -153,3 +153,54 @@ nav ul li a:hover {
     background   : black;
     border-radius: 12px;
 }
+
+.marquee-section {
+    background: url(../img/marquee-img.jpg) no-repeat center center/cover;
+}
+
+.spacer {
+    height: 300px;
+}
+
+.marquee {
+    position: relative;
+    background    : #0f0f0f;
+    color         : #eee;
+    padding       : 30px 0;
+    font-weight   : 600;
+    font-size     : 40px;
+    text-transform: uppercase;
+    overflow      : hidden;
+}
+
+.marquee-inner {
+    display       : flex;
+    width         : fit-content;
+    flex          : auto;
+    flex-direction: row;
+}
+
+.marquee-part {
+    display    : flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding    : 0 4px;
+}
+
+.arrow {
+    width     : 60px;
+    height    : 80px;
+    margin    : 0 1em;
+    color     : #eee;
+    transform : rotate(360deg);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.arrow img {
+    width: 80px;
+}
+
+.arrow.active {
+    transform : rotate(-180deg);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
