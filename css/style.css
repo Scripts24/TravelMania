@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 * {
     margin         : 0;
@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', serif;
 }
 
 /*OVERLAY*/
@@ -29,6 +29,7 @@ body {
     top           : 50%;
     left          : 50%;
     transform     : translate(-50%, -50%);
+    font-family   : 'Cinzel', serif;
     font-size     : 20px;
     font-weight   : bold;
     letter-spacing: 12px;
@@ -43,33 +44,46 @@ header {
     background-size: cover;
 }
 
-.logo {
-    line-height: 40px;
-    float      : left;
-    margin     : 1.2em 0 0 2.2em;
+.wrapper {
+    width          : 100%;
+    display        : flex;
+    justify-content: space-between;
+    padding        : 30px 20px;
+}
+
+.wrapper .logo {
+    color      : antiquewhite;
+    font-family: 'Cinzel', serif;
     font-weight: 600;
     color      : antiquewhite;
     font-size  : 1.2rem;
+    margin-left: 2%;
 }
 
-nav {
-    line-height: 40px;
-    margin     : 1.2em;
-    position   : absolute;
-    right      : 0;
+.wrapper nav {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    margin-right   : 2%;
 }
 
-nav ul li {
-    display      : inline-block;
-    padding-right: 36px;
+.wrapper ul {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
 }
 
-nav ul li a {
-    color: antiquewhite;
+.wrapper ul li a {
+    margin        : 0 15px;
+    color         : antiquewhite;
+    letter-spacing: 2px;
 }
 
-nav ul li a:hover {
-    color: burlywood;
+.wrapper .btn {
+    color    : #fff;
+    font-size: 25px;
+    cursor   : pointer;
+    display  : none;
 }
 
 .social-media {
@@ -96,6 +110,7 @@ nav ul li a:hover {
     transform     : rotate(90deg);
     color         : antiquewhite;
     letter-spacing: 4px;
+    font-family   : 'Cinzel', serif;
 }
 
 .box-title {
@@ -107,11 +122,12 @@ nav ul li a:hover {
 
 .box-title h1 {
     color      : antiquewhite;
-    font-weight: 600;
+    font-size  : 2rem;
+    font-family: 'Cinzel', serif;
 }
 
 .box-title p {
-    color         : rgb(240, 49, 49);
+    color         : rgba(43, 42, 39, 0.959);
     font-weight   : 700;
     letter-spacing: 3px;
 }
@@ -154,6 +170,8 @@ nav ul li a:hover {
     border-radius: 12px;
 }
 
+/*Sroll text GSAP*/
+
 .marquee-section {
     background: url(../img/marquee-img.jpg) no-repeat center center/cover;
 }
@@ -163,10 +181,11 @@ nav ul li a:hover {
 }
 
 .marquee {
-    position: relative;
+    position      : relative;
     background    : #0f0f0f;
     color         : #eee;
     padding       : 30px 0;
+    font-family   : 'Cinzel', serif;
     font-weight   : 600;
     font-size     : 40px;
     text-transform: uppercase;
@@ -203,4 +222,60 @@ nav ul li a:hover {
 .arrow.active {
     transform : rotate(-180deg);
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/**---------------------------------------------------------------**/
+
+/**MEDIA QUERIES**/
+
+@media (max-width: 768px) {
+
+    .wrapper .btn {
+        display: block;
+    }
+
+    .wrapper .menu-btn {
+        color       : antiquewhite;
+        margin-right: 20px;
+    }
+
+    .wrapper .menu {
+        position           : absolute;
+        background         : #e69446;
+        width              : 200px;
+        height             : 100vh;
+        top                : 0;
+        right              : -100%;
+        padding-right      : 10%;
+        transition         : 0.8s;
+        transition-property: right;
+        z-index            : 10;
+    }
+
+    .wrapper .menu ul {
+        flex-direction: column;
+    }
+
+    .wrapper .menu.active {
+        right       : 0;
+        margin-right: 0;
+    }
+
+    .wrapper .menu .close-btn {
+        position : absolute;
+        top      : 0;
+        left     : 0;
+        margin   : 5px;
+        font-size: 35px;
+        cursor   : pointer;
+
+    }
+
+    .wrapper .menu a {
+        display  : block;
+        font-size: 20px;
+        margin   : 20px auto;
+        padding  : 20px 15px;
+        color    : antiquewhite;
+    }
 }

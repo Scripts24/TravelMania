@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TravelMania</title>
+    <!--Favicon-->
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -23,15 +24,24 @@
     </div>
 
     <header>
-        <div class="logo">TravelManía</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#places">Destinos</a></li>
-                <li><a href="#hotels">Hoteles</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="wrapper">
+            <div class="logo">TravelManía</div>
+            <nav class="menu">
+                <div class="btn">
+                    <i class="bi bi-x close-btn"></i>
+                </div>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#places">Destinos</a></li>
+                    <li><a href="#hotels">Hoteles</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="btn">
+                <i class="bi bi-list menu-btn"></i>
+            </div>
+        </div>
+
         <div class="social-media">
             <ul>
                 <li><i class="bi bi-instagram" aria-hidden="true"></i></li>
@@ -43,13 +53,13 @@
             <span>RENUEVA TU ESPÍRITU</span>
         </div>
         <div class="box-title">
-            <h1>Elige tu próxima <br>aventura</h1>
+            <h1>Elige tu próxima aventura</h1>
             <p>El mundo es demasiado grande como para pasar nuestro tiempo en un solo lugar...viaja!</p>
             <button>Explora</button>
         </div>
-
     </header>
 
+    <!--Inicio contenido principal-->
     <main>
         <section class="info">
             <div class="bottom-bar">
@@ -74,6 +84,7 @@
                 </div>
             </div>
         </section>
+
         <section class="marquee-section">
             <section class="spacer"></section>
 
@@ -82,7 +93,7 @@
                     <div class="marquee-part">
                         viaja explora disfruta
                         <div class="arrow">
-                           <img src="./img/airplane.svg">
+                            <img src="./img/airplane.svg">
                         </div>
                     </div>
                     <div class="marquee-part">
@@ -123,10 +134,12 @@
 
 
     </main>
+    <!--Fin contenido principal-->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
         integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/main.js"></script>

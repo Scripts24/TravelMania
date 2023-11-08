@@ -101,7 +101,7 @@ gsap.set(".marquee-inner", {
 })
 
 window.addEventListener("scroll", function(){
-    if(window.pageYOffset > currentScroll){
+    if(window.scrollY > currentScroll){
         isScrollingDown = true
     }else{
         isScrollingDown = false
@@ -119,5 +119,18 @@ window.addEventListener("scroll", function(){
         }
     })
 
-    currentScroll = window.pageYOffset
+    currentScroll = window.scrollY
 })
+
+// Menu responsive
+const menu = document.querySelector('.menu');
+const menuBtn = document.querySelector('.menu-btn');
+const closeBtn = document.querySelector('.close-btn');
+
+menuBtn.addEventListener("click", () => {
+    menu.classList.add('active');
+});
+
+closeBtn.addEventListener("click", () => {
+    menu.classList.remove('active');
+});
