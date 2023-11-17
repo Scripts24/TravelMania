@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Syne:wght@400;500;600;700;800&display=swap');
 
 * {
     margin         : 0;
@@ -7,6 +7,7 @@
     text-decoration: none !important;
     list-style     : none;
     border         : none;
+    outline        : none;
 }
 
 body {
@@ -173,7 +174,7 @@ header {
 /*Sroll text GSAP*/
 
 .marquee-section {
-    background: url(../img/marquee-img.jpg) no-repeat center center/cover;
+    background: url(../img/marquee-img-bg.jpg) no-repeat center center/cover;
 }
 
 .spacer {
@@ -223,6 +224,197 @@ header {
     transform : rotate(-180deg);
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+/*CONTACTO*/
+
+.contact {
+    background-color     : #0f0f0f;
+    font-family          : 'Syne', sans-serif;
+    font-weight          : 800;
+    font-feature-settings: "pnum"on, "lnum"on;
+}
+
+.wrapp {
+    position       : relative;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    z-index        : 1;
+    width          : 100%;
+    height         : 100vh;
+}
+
+.title {
+    margin             : 0;
+    font-size          : 2.5rem;
+    text-transform     : uppercase;
+    color              : transparent;
+    letter-spacing     : 5px;
+    -webkit-text-stroke: 1px antiquewhite;
+}
+
+.content {
+    position : relative;
+    max-width: 900px;
+}
+
+.content::before {
+    position  : absolute;
+    content   : '';
+    width     : 2px;
+    height    : calc(100% - 19px);
+    top       : 19px;
+    left      : -50px;
+    background: linear-gradient(9deg, rgb(243, 188, 9) 0%, rgb(223, 73, 35) 86%);
+}
+
+.form {
+    margin-top: 50px;
+}
+
+.form-item {
+    position     : relative;
+    max-width    : 100%;
+    margin-bottom: 30px;
+}
+
+.form-input-text {
+    width        : 100%;
+    height       : 60px;
+    padding-left : 40px;
+    padding-right: 10px;
+    font-size    : 16px;
+    color        : antiquewhite;
+    line-height  : 47px;
+    border-radius: 5px;
+    background   : none;
+}
+
+.form-label {
+    position      : absolute;
+    bottom        : 0;
+    left          : 0;
+    width         : 100%;
+    height        : 100%;
+    pointer-events: none;
+}
+
+.form-label-name {
+    position        : absolute;
+    left            : 40px;
+    top             : 50%;
+    color           : antiquewhite;
+    font-size       : 14px;
+    line-height     : .9;
+    letter-spacing  : 2px;
+    text-transform  : uppercase;
+    transform       : translateY(-50%);
+    transform-origin: left;
+    transition      : cubic-bezier(.9, 0, .1, 1);
+}
+
+.form-label-sq {
+    position  : absolute;
+    width     : 20px;
+    height    : 20px;
+    top       : 50%;
+    left      : 3px;
+    opacity   : .4;
+    background: linear-gradient(9deg, rgb(243, 188, 9) 0%, rgb(223, 73, 35) 86%);
+    transform : translateY(-50%) rotate(-45deg);
+    transition: 1s cubic-bezier(.9, 0, .1, 1);
+}
+
+.form-label-line {
+    position      : absolute;
+    width         : 100%;
+    height        : 2px;
+    bottom        : 2px;
+    background    : linear-gradient(135deg, #242424 0%, #131313 100%);
+    pointer-events: none;
+    overflow      : hidden;
+}
+
+.form-label-bg {
+    width     : 100%;
+    height    : 100%;
+    background: linear-gradient(9deg, rgb(243, 188, 9) 0%, rgb(223, 73, 35) 86%);
+    transform : translateX(-110%);
+    transition: 1s cubic-bezier(.9, 0, .1, 1);
+}
+
+.form-input-text:focus+.form-label .form-label-name,
+.form-input-text:valid+.form-label .form-label-name {
+    transform: translateY(-33px) scale(.7);
+    color    : #ffffff50;
+}
+
+.form-input-text:focus+.form-label .form-label-bg,
+.form-input-text:valid+.form-label .form-label-bg {
+    transform: translateX(0%);
+}
+
+.form-input-text:focus+.form-label .form-label-sq,
+.form-input-text:valid+.form-label .form-label-sq {
+    opacity  : 1;
+    transform: translateY(-50%) rotate(-405deg);
+}
+
+.form-btn {
+    position      : relative;
+    display       : block;
+    width         : 100%;
+    padding       : 15px 0;
+    margin-top    : 10px;
+    color         : antiquewhite;
+    font-size     : 18px;
+    font-weight   : 700;
+    text-align    : center;
+    cursor        : pointer;
+    border-radius : 5px;
+    background    : linear-gradient(135deg, #242424 0%, #131313 100%);
+    overflow      : hidden;
+    text-transform: uppercase;
+}
+
+.form-btn-txt {
+    position      : relative;
+    letter-spacing: 4px;
+    pointer-events: none;
+    transition    : 1s cubic-bezier(.9, 0, .1, 1);
+    z-index       : 2;
+}
+
+.form-btn:hover .form-btn-txt {
+    letter-spacing: 15px;
+    color         : #0f0f0f;
+}
+
+.form-btn-bg {
+    position      : absolute;
+    height        : 100%;
+    width         : 100%;
+    top           : 0;
+    left          : 0;
+    pointer-events: none;
+    transform     : translateX(-102%);
+    background    : linear-gradient(9deg, rgb(243, 188, 9) 0%, rgb(223, 73, 35) 86%);
+    transition    : 1s cubic-bezier(.9, 0, .1, 1);
+    z-index       : 1;
+}
+
+.form-btn:hover .form-btn-bg {
+    transform: translateX(0);
+}
+
+/*? Estilo para ocultar la flecha de incremento/decremento en campos de tipo número */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin            : 0;
+}
+
+
 
 /**---------------------------------------------------------------**/
 
