@@ -135,3 +135,14 @@ menuBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     menu.classList.remove('active');
 });
+
+//* Footer reveal on scroll
+
+gsap.from(".fixed-footer", {
+    y: -100,
+    scrollTrigger:{
+        trigger: ".content-reveal",
+        start: "bottom bottom",
+        scrub: true,
+    }
+})

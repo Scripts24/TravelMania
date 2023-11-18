@@ -33,7 +33,7 @@
                 <ul>
                     <li><a href="#home">Inicio</a></li>
                     <li><a href="#places">Destinos</a></li>
-                    <li><a href="#hotels">Hoteles</a></li>
+                    <li><a href="#gallery">Galería</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
@@ -47,6 +47,7 @@
                 <li><i class="bi bi-instagram" aria-hidden="true"></i></li>
                 <li><i class="bi bi-twitter-x" aria-hidden="true"></i></li>
                 <li><i class="bi bi-facebook" aria-hidden="true"></i></li>
+                <li><i class="bi bi-threads" aria-hidden="true"></i></li>
             </ul>
         </div>
         <div class="side-strip">
@@ -133,11 +134,10 @@
         </section>
 
         <!--CONTACTO-->
+        <section class="contact content-reveal " id="contact">
+            <div class="wrapp content-inner">
 
-        <section class="contact" id="contact">
-            <div class="wrapp">
-
-                <div class="content">
+                <div class="content ">
                     <h2 class="title">Contáctanos</h2>
 
                     <form class="form">
@@ -197,13 +197,45 @@
 
     </main>
     <!--Fin contenido principal-->
-
+    <!--Footer-ScrollTrigger-->
+    <footer class="fixed-footer">
+        <div class="content-reveal">
+            <div class="content-inner">
+                <div class="nav-footer">
+                    <div>
+                        <li>Inicio</li>
+                        <li>Destinos</li>
+                        <li>Galería</li>
+                        <li>Contacto</li>
+                    </div>
+                    <div>
+                        <span>TravelManía</span> <br>
+                        <span>San Luis, Argentina</span> <br>
+                        <span>+54 32546-5554789</span> <br>
+                        <span>info.travel@gmail.com</span>
+                    </div>
+                    <div>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Threads</li>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>Todos los derechos reservados &copy;
+                        <script> document.write(new Date().getFullYear());</script>
+                    </p>
+                    <p>Developed by <u>Patricia Atanasoff</u></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Fin Footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
-        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

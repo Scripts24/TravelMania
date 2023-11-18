@@ -12,6 +12,7 @@
 
 body {
     font-family: 'Roboto', serif;
+    background : #e69446;
 }
 
 /*OVERLAY*/
@@ -22,7 +23,7 @@ body {
     width     : 100%;
     height    : 100vh;
     background: antiquewhite;
-    top       : 0%;
+    top       : 0;
 }
 
 .overlay h1 {
@@ -413,6 +414,53 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin            : 0;
 }
+
+/*FOOTER*/
+
+.content-inner {
+    width  : 100%;
+    margin : 0 0 350px 0;
+    padding: 100px;
+
+}
+
+.fixed-footer {
+    width   : 100%;
+    height  : 350px;
+    position: fixed;
+    left    : 0;
+    bottom  : 0;
+    z-index : -100;
+}
+
+.nav-footer {
+    display        : flex;
+    justify-content: space-around;
+
+}
+
+.nav-footer li,
+.nav-footer span {
+    text-transform: uppercase;
+    font-family   : 'Cinzel', serif;
+    font-size     : .8rem;
+    letter-spacing: .1px;
+    line-height   : 30px;
+}
+
+.copyright {
+    display        : flex;
+    justify-content: space-around;
+    flex-wrap      : wrap;
+    font-family    : 'Cinzel', serif;
+    text-transform : uppercase;
+    font-size      : .8rem;
+    letter-spacing : .1px;
+    line-height    : 30px;
+    opacity        : .5;
+    margin         : 3rem 0 0 0;
+}
+
 
 
 
