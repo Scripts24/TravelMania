@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Syne:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Syne:wght@400;500;600;700;800&display=swap");
 
 * {
     margin         : 0;
@@ -10,8 +10,17 @@
     outline        : none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width     : 0.01rem;
+    visibility: hidden;
+}
+
 body {
-    font-family: 'Roboto', serif;
+    font-family: "Roboto", serif;
     background : #e69446;
 }
 
@@ -31,7 +40,7 @@ body {
     top           : 50%;
     left          : 50%;
     transform     : translate(-50%, -50%);
-    font-family   : 'Cinzel', serif;
+    font-family   : "Cinzel", serif;
     font-size     : 20px;
     font-weight   : bold;
     letter-spacing: 12px;
@@ -42,7 +51,7 @@ body {
 
 header {
     height         : 100vh;
-    background     : url('/img/hero.jpg') no-repeat 50% 50%;
+    background     : url("/img/hero.jpg") no-repeat 50% 50%;
     background-size: cover;
 }
 
@@ -55,7 +64,7 @@ header {
 
 .wrapper .logo {
     color      : antiquewhite;
-    font-family: 'Cinzel', serif;
+    font-family: "Cinzel", serif;
     font-weight: 600;
     color      : antiquewhite;
     font-size  : 1.2rem;
@@ -112,7 +121,7 @@ header {
     transform     : rotate(90deg);
     color         : antiquewhite;
     letter-spacing: 4px;
-    font-family   : 'Cinzel', serif;
+    font-family   : "Cinzel", serif;
 }
 
 .box-title {
@@ -125,7 +134,7 @@ header {
 .box-title h1 {
     color      : antiquewhite;
     font-size  : 2rem;
-    font-family: 'Cinzel', serif;
+    font-family: "Cinzel", serif;
 }
 
 .box-title p {
@@ -167,7 +176,7 @@ header {
 }
 
 .row {
-    padding      : .5em;
+    padding      : 0.5em;
     background   : black;
     border-radius: 12px;
 }
@@ -187,7 +196,7 @@ header {
     background    : #0f0f0f;
     color         : #eee;
     padding       : 30px 0;
-    font-family   : 'Cinzel', serif;
+    font-family   : "Cinzel", serif;
     font-weight   : 600;
     font-size     : 40px;
     text-transform: uppercase;
@@ -226,11 +235,147 @@ header {
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+/*GALERÍA*/
+
+#gallery {
+    background : #0f0f0f;
+    font-family: "Cinzel", serif;
+}
+
+.wrapp-gallery {
+    position   : relative;
+    width      : 100%;
+    height     : auto;
+    padding    : 50px;
+    padding-top: 130px;
+    z-index    : 1;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    gap: 60px;
+    margin-top: 2rem;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+
+.gallery-item {
+    position : relative;
+    max-width: 350px;
+    width    : 100%;
+    height   : 500px;
+    overflow : hidden;
+    cursor   : pointer;
+}
+
+.gallery-img {
+    display    : block;
+    width      : 100%;
+    height     : 100%;
+    object-fit : cover;
+    will-change: transform;
+    transition : 0.8s cubic-bezier(0.9, 0, 0.1, 1);
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.3);
+}
+
+.gallery-item::after {
+    position       : absolute;
+    content        : "";
+    width          : 100%;
+    height         : 100%;
+    top            : 0;
+    left           : 0;
+    opacity        : 0;
+    backdrop-filter: blur(20px);
+    background     : rgba(0, 0 0, 0.614);
+    will-change    : opacity;
+    pointer-events : none;
+    z-index        : 2;
+    transition     : 0.8s cubic-bezier(0.9, 0, 0.1, 1);
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+.zoom {
+    display            : block;
+    position           : absolute;
+    top                : 50%;
+    left               : 50%;
+    opacity            : 0;
+    font-size          : 40px;
+    text-transform     : uppercase;
+    will-change        : transform, opacity;
+    pointer-events     : none;
+    transform          : translate(-50%, -10%);
+    -webkit-text-stroke: 1px antiquewhite;
+    color              : transparent;
+    font-weight        : 800;
+    z-index            : 3;
+    transition         : 0.8s cubic-bezier(0.9, 0, 0.1, 1);
+}
+
+.gallery-item:hover .zoom {
+    opacity  : 1;
+    transform: translate(-50%, -50%);
+}
+
+/*Estilos FancyBox*/
+.fancybox__backdrop::after {
+    content            : "";
+    position           : absolute;
+    width              : 10%;
+    height             : 10%;
+    filter             : blur(2px);
+    left               : 50%;
+    top                : 50%;
+    transform          : scale(11);
+    opacity            : 0.3;
+    background-image   : var(--bg-image);
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    background-position: center center;
+}
+
+.fancybox__toolbar {
+    padding: 16px;
+}
+
+.fancybox__toolbar,
+.fancybox__nav {
+    --f-button-border-radius: 50%;
+    --f-button-bg           : rgb(91 78 76 / 64%);
+    --f-button-hover-bg     : rgb(91 78 76 / 74%);
+    --f-button-active-bg    : rgb(91 78 76 / 84%);
+}
+
+.fancybox__nav {
+    --f-button-svg-width : 22px;
+    --f-button-svg-height: 22px;
+}
+
+.fancybox__thumbs.is-classic {
+    --f-thumb-width : 48px;
+    --f-thumb-height: 48px;
+    --f-thumb-gap   : 16px;
+
+    --f-thumb-border-radius: 6px;
+    --f-thumb-outline      : 0;
+}
+
 /*CONTACTO*/
 
 .contact {
     background-color     : #0f0f0f;
-    font-family          : 'Syne', sans-serif;
+    font-family          : "Syne", sans-serif;
     font-weight          : 800;
     font-feature-settings: "pnum"on, "lnum"on;
 }
@@ -252,6 +397,7 @@ header {
     color              : transparent;
     letter-spacing     : 5px;
     -webkit-text-stroke: 1px antiquewhite;
+    text-align         : center;
 }
 
 .content {
@@ -261,7 +407,7 @@ header {
 
 .content::before {
     position  : absolute;
-    content   : '';
+    content   : "";
     width     : 2px;
     height    : calc(100% - 19px);
     top       : 19px;
@@ -306,12 +452,12 @@ header {
     top             : 50%;
     color           : antiquewhite;
     font-size       : 14px;
-    line-height     : .9;
+    line-height     : 0.9;
     letter-spacing  : 2px;
     text-transform  : uppercase;
     transform       : translateY(-50%);
     transform-origin: left;
-    transition      : cubic-bezier(.9, 0, .1, 1);
+    transition      : cubic-bezier(0.9, 0, 0.1, 1);
 }
 
 .form-label-sq {
@@ -320,10 +466,10 @@ header {
     height    : 20px;
     top       : 50%;
     left      : 3px;
-    opacity   : .4;
+    opacity   : 0.4;
     background: linear-gradient(9deg, rgb(243, 188, 9) 0%, rgb(223, 73, 35) 86%);
     transform : translateY(-50%) rotate(-45deg);
-    transition: 1s cubic-bezier(.9, 0, .1, 1);
+    transition: 1s cubic-bezier(0.9, 0, 0.1, 1);
 }
 
 .form-label-line {
@@ -341,12 +487,12 @@ header {
     height    : 100%;
     background: linear-gradient(9deg, rgb(243, 188, 9) 0%, rgb(223, 73, 35) 86%);
     transform : translateX(-110%);
-    transition: 1s cubic-bezier(.9, 0, .1, 1);
+    transition: 1s cubic-bezier(0.9, 0, 0.1, 1);
 }
 
 .form-input-text:focus+.form-label .form-label-name,
 .form-input-text:valid+.form-label .form-label-name {
-    transform: translateY(-33px) scale(.7);
+    transform: translateY(-33px) scale(0.7);
     color    : #ffffff50;
 }
 
@@ -382,7 +528,7 @@ header {
     position      : relative;
     letter-spacing: 4px;
     pointer-events: none;
-    transition    : 1s cubic-bezier(.9, 0, .1, 1);
+    transition    : 1s cubic-bezier(0.9, 0, 0.1, 1);
     z-index       : 2;
 }
 
@@ -400,7 +546,7 @@ header {
     pointer-events: none;
     transform     : translateX(-102%);
     background    : linear-gradient(9deg, rgb(243, 188, 9) 0%, rgb(223, 73, 35) 86%);
-    transition    : 1s cubic-bezier(.9, 0, .1, 1);
+    transition    : 1s cubic-bezier(0.9, 0, 0.1, 1);
     z-index       : 1;
 }
 
@@ -409,8 +555,8 @@ header {
 }
 
 /*? Estilo para ocultar la flecha de incremento/decremento en campos de tipo número */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin            : 0;
 }
@@ -419,9 +565,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .content-inner {
     width  : 100%;
-    margin : 0 0 350px 0;
+    margin : 0 0 420px 0;
     padding: 100px;
-
 }
 
 .fixed-footer {
@@ -436,15 +581,14 @@ input[type=number]::-webkit-outer-spin-button {
 .nav-footer {
     display        : flex;
     justify-content: space-around;
-
 }
 
 .nav-footer li,
 .nav-footer span {
     text-transform: uppercase;
-    font-family   : 'Cinzel', serif;
-    font-size     : .8rem;
-    letter-spacing: .1px;
+    font-family   : "Cinzel", serif;
+    font-size     : 0.8rem;
+    letter-spacing: 0.1px;
     line-height   : 30px;
 }
 
@@ -452,24 +596,30 @@ input[type=number]::-webkit-outer-spin-button {
     display        : flex;
     justify-content: space-around;
     flex-wrap      : wrap;
-    font-family    : 'Cinzel', serif;
+    font-family    : "Cinzel", serif;
     text-transform : uppercase;
-    font-size      : .8rem;
-    letter-spacing : .1px;
+    font-size      : 0.8rem;
+    letter-spacing : 0.1px;
     line-height    : 30px;
-    opacity        : .5;
+    opacity        : 0.5;
     margin         : 3rem 0 0 0;
 }
-
-
-
 
 /**---------------------------------------------------------------**/
 
 /**MEDIA QUERIES**/
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .gallery {
+        gap: 30px; 
+    }
 
+    .gallery-item {
+        max-width: 48%; 
+    }
+}
+
+@media (max-width: 768px) {
     .wrapper .btn {
         display: block;
     }
@@ -508,7 +658,6 @@ input[type=number]::-webkit-outer-spin-button {
         margin   : 5px;
         font-size: 35px;
         cursor   : pointer;
-
     }
 
     .wrapper .menu a {
@@ -518,4 +667,16 @@ input[type=number]::-webkit-outer-spin-button {
         padding  : 20px 15px;
         color    : antiquewhite;
     }
+
+    .wrapp-gallery {
+        padding: 30px;
+        padding-top: 80px;
+    }
+
+    .gallery-item {
+        max-width: 100%;
+        height: auto;
+    }
+
 }
+

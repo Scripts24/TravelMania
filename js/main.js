@@ -139,10 +139,48 @@ closeBtn.addEventListener("click", () => {
 //* Footer reveal on scroll
 
 gsap.from(".fixed-footer", {
-    y: -100,
-    scrollTrigger:{
+    y: -500,
+    scrollTrigger: {
         trigger: ".content-reveal",
         start: "bottom bottom",
         scrub: true,
     }
 })
+
+
+//* Gallery FancyBox
+
+Fancybox.bind('[data-fancybox="gallery"]', {
+    dragToClose: false,
+
+    closeButton: 'top',
+
+    Images: {
+        zoom: false,
+    },
+
+    Thumbs: {
+        type: 'classic',
+    },
+
+    Carousel: {
+        transition: false,
+        friction: 0,
+    },
+
+    iframe: {
+        css: {
+            width: '70%', // O el porcentaje que prefieras
+            height: '70%', // O el porcentaje que prefieras
+        },
+    },
+
+    on: {
+        'Carousel.ready Carousel.change': (fancybox) => {
+            fancybox.container.style.setProperty(
+                '--bg-image',
+                `url("${fancybox.getSlide().thumbSrc}")`
+            );
+        },
+    },
+});
