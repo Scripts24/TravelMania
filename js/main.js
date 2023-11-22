@@ -61,27 +61,27 @@ TweenMax.from(".box-title button", 2, {
 })
 
 TweenMax.from(".row", 5, {
-    delay: 5,
+    delay: 4,
     opacity: 0,
     x: 40,
     ease: Expo.easeInOut,
 })
 
 TweenMax.from(".row h6", 6, {
-    delay: 5.5,
+    delay: 4.5,
     opacity: 0,
     y: 40,
     ease: Expo.easeInOut,
 })
 
 TweenMax.from(".row p", 7, {
-    delay: 5.7,
+    delay: 4.7,
     opacity: 0,
     y: 20,
     ease: Expo.easeInOut,
 })
 
-// MARQUEE 
+//* MARQUEE 
 
 let currentScroll = 0
 let isScrollingDown = true

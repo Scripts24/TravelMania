@@ -108,9 +108,15 @@ header {
     padding-top: 20px;
 }
 
-.social-media ul li:hover {
-    color : burlywood;
-    cursor: pointer;
+.social-media ul li i {
+    font-size : 25px;
+    transition: .3s;
+}
+
+.social-media ul li i:hover {
+    color    : rgb(250, 215, 57);
+    font-size: 30px;
+    cursor   : pointer;
 }
 
 .side-strip {
@@ -153,9 +159,9 @@ header {
     font-size       : 12px;
 }
 
-/*INFO*/
+/*NOSOTROS*/
 
-.info {
+.about {
     padding-top   : 2em;
     padding-bottom: 2em;
     background    : #e69446;
@@ -181,7 +187,7 @@ header {
     border-radius: 12px;
 }
 
-/*Sroll text GSAP*/
+/*Scroll text GSAP*/
 
 .marquee-section {
     background: url(../img/marquee-img-bg.jpg) no-repeat center center/cover;
@@ -235,6 +241,93 @@ header {
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+/*DESTACADOS*/
+
+.places {
+    font-family: 'Poppins', sans-serif;
+    background : #191a19;
+    width      : 100%;
+    min-height : 100vh;
+    padding-top: 20px;
+}
+
+.container-cards {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-wrap      : wrap;
+    max-width      : 1300px;
+    gap            : 15px;
+    margin-top     : 30px;
+    padding-bottom : 50px;
+}
+
+.container-img {
+    position     : relative;
+    width        : 340px;
+    height       : 250px;
+    border-radius: 20px;
+    border       : 3px solid antiquewhite;
+    overflow     : hidden;
+}
+
+.card-img {
+    width        : 100%;
+    height       : 100%;
+    object-fit   : cover;
+    border-radius: 15px;
+}
+
+.card-body {
+    position       : absolute;
+    width          : 100%;
+    height         : 100%;
+    top            : 0;
+    right          : -100%;
+    background     : #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius  : 15px;
+    color          : antiquewhite;
+    padding        : 20px;
+    display        : flex;
+    justify-content: center;
+    flex-direction : column;
+    transition     : 2s;
+}
+
+.container-img:hover .card-body {
+    right: 0;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size     : 30px;
+    font-weight   : 600;
+}
+
+.card-sub-title {
+    text-transform: capitalize;
+    font-size     : 14px;
+    font-weight   : 300;
+}
+
+.card-info {
+    font-size  : 16px;
+    font-weight: 500;
+}
+
+.card-btn {
+    width         : 100px;
+    color         : antiquewhite;
+    background    : #191a19;
+    padding       : 5px 8px;
+    border-radius : 5px;
+    font-size     : 14px;
+    font-weight   : 500;
+    text-transform: uppercase;
+    cursor        : pointer;
+}
+
 /*GALERÍA*/
 
 #gallery {
@@ -243,25 +336,23 @@ header {
 }
 
 .wrapp-gallery {
-    position   : relative;
-    width      : 100%;
-    height     : auto;
-    padding    : 50px;
-    padding-top: 130px;
-    z-index    : 1;
+    position: relative;
+    width   : 100%;
+    height  : auto;
+    padding : 30px;
+    z-index : 1;
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    gap: 60px;
-    margin-top: 2rem;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-wrap      : wrap;
+    width          : 100%;
+    height         : auto;
+    gap            : 60px;
+    margin-top     : 2rem;
 }
-
 
 .gallery-item {
     position : relative;
@@ -278,7 +369,7 @@ header {
     height     : 100%;
     object-fit : cover;
     will-change: transform;
-    transition : 0.8s cubic-bezier(0.9, 0, 0.1, 1);
+    transition : .8s cubic-bezier(0.9, 0, 0.1, 1);
 }
 
 .gallery-item:hover .gallery-img {
@@ -298,7 +389,7 @@ header {
     will-change    : opacity;
     pointer-events : none;
     z-index        : 2;
-    transition     : 0.8s cubic-bezier(0.9, 0, 0.1, 1);
+    transition     : .8s cubic-bezier(0.9, 0, 0.1, 1);
 }
 
 .gallery-item:hover::after {
@@ -320,7 +411,7 @@ header {
     color              : transparent;
     font-weight        : 800;
     z-index            : 3;
-    transition         : 0.8s cubic-bezier(0.9, 0, 0.1, 1);
+    transition         : .8s cubic-bezier(0.9, 0, 0.1, 1);
 }
 
 .gallery-item:hover .zoom {
@@ -328,7 +419,7 @@ header {
     transform: translate(-50%, -50%);
 }
 
-/*Estilos FancyBox*/
+/*?Estilos FancyBox*/
 .fancybox__backdrop::after {
     content            : "";
     position           : absolute;
@@ -374,7 +465,7 @@ header {
 /*CONTACTO*/
 
 .contact {
-    background-color     : #0f0f0f;
+    background-color     : #242424;
     font-family          : "Syne", sans-serif;
     font-weight          : 800;
     font-feature-settings: "pnum"on, "lnum"on;
@@ -477,7 +568,7 @@ header {
     width         : 100%;
     height        : 2px;
     bottom        : 2px;
-    background    : linear-gradient(135deg, #242424 0%, #131313 100%);
+    background    : linear-gradient(135deg, #332f2f 0%, #464343 100%);
     pointer-events: none;
     overflow      : hidden;
 }
@@ -519,7 +610,7 @@ header {
     text-align    : center;
     cursor        : pointer;
     border-radius : 5px;
-    background    : linear-gradient(135deg, #242424 0%, #131313 100%);
+    background    : linear-gradient(135deg, #332f2f 0%, #464343 100%);
     overflow      : hidden;
     text-transform: uppercase;
 }
@@ -611,11 +702,11 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @media (max-width: 1024px) {
     .gallery {
-        gap: 30px; 
+        gap: 30px;
     }
 
     .gallery-item {
-        max-width: 48%; 
+        max-width: 48%;
     }
 }
 
@@ -669,14 +760,13 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 
     .wrapp-gallery {
-        padding: 30px;
+        padding    : 30px;
         padding-top: 80px;
     }
 
     .gallery-item {
         max-width: 100%;
-        height: auto;
+        height   : auto;
     }
 
 }
-
