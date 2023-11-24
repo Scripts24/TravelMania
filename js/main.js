@@ -170,8 +170,8 @@ Fancybox.bind('[data-fancybox="gallery"]', {
 
     iframe: {
         css: {
-            width: '70%', // O el porcentaje que prefieras
-            height: '70%', // O el porcentaje que prefieras
+            width: '90%', 
+            height: '90%',
         },
     },
 

@@ -53,6 +53,8 @@ header {
     height         : 100vh;
     background     : url("/img/hero.jpg") no-repeat 50% 50%;
     background-size: cover;
+    top            : 0;
+    left           : 0;
 }
 
 .wrapper {
@@ -704,15 +706,21 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @media (max-width: 1024px) {
     .gallery {
-        gap: 30px;
+        gap: 15px;
     }
 
     .gallery-item {
         max-width: 48%;
+        height: auto;
+    }
+
+    .gallery-img{
+        max-height: 100%;
     }
 }
 
 @media (max-width: 768px) {
+
     .wrapper .btn {
         display: block;
     }
@@ -771,6 +779,10 @@ input[type="number"]::-webkit-outer-spin-button {
         height   : auto;
     }
 
+    .zoom{
+        font-size: 24px;
+    }
+
     html {
         font-size: 55%;
     }
@@ -819,13 +831,13 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 
     .box-title button {
-        padding         : 12px 30px;
+        padding: 12px 30px;
     }
 
     .form {
         margin-top: 20px;
     }
-    
+
     .form-item {
         margin-bottom: 10px;
     }
