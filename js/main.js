@@ -139,7 +139,7 @@ closeBtn.addEventListener("click", () => {
 //* Footer reveal on scroll
 
 gsap.from(".fixed-footer", {
-    y: -500,
+    y: -100,
     scrollTrigger: {
         trigger: ".content-reveal",
         start: "bottom bottom",
