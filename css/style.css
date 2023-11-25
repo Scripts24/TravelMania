@@ -757,7 +757,7 @@ input[type="number"]::-webkit-outer-spin-button {
         position : absolute;
         top      : 0;
         left     : 0;
-        margin   : 5px;
+        margin   : 30px;
         font-size: 35px;
         cursor   : pointer;
     }
@@ -765,7 +765,7 @@ input[type="number"]::-webkit-outer-spin-button {
     .wrapper .menu a {
         display  : block;
         font-size: 20px;
-        margin   : 20px auto;
+        margin   : 15px auto;
         padding  : 20px 15px;
         color    : antiquewhite;
     }
