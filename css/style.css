@@ -259,8 +259,7 @@ header {
     align-items    : center;
     justify-content: center;
     flex-wrap      : wrap;
-    max-width      : 1300px;
-    gap            : 15px;
+    gap            : 20px;
     margin-top     : 30px;
     padding-bottom : 50px;
 }
@@ -340,7 +339,8 @@ header {
 
 .wrapp-gallery {
     position: relative;
-    width   : 100%;
+    width: 100%;
+    right: 20px;
     height  : auto;
     padding : 30px;
     z-index : 1;
