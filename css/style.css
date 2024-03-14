@@ -22,6 +22,7 @@ html::-webkit-scrollbar {
 body {
     font-family: "Roboto", serif;
     background : #e69446;
+    overflow-x : hidden;
 }
 
 /*OVERLAY*/
@@ -41,7 +42,7 @@ body {
     left          : 50%;
     transform     : translate(-50%, -50%);
     font-family   : "Cinzel", serif;
-    font-size     : 30px;
+    font-size     : 1.5rem;
     font-weight   : bold;
     letter-spacing: 12px;
     text-transform: uppercase;
@@ -165,6 +166,10 @@ header {
     font-size       : 18px;
 }
 
+.box-title button:hover {
+    letter-spacing: 8px;
+}
+
 /*NOSOTROS*/
 
 .about {
@@ -177,7 +182,7 @@ header {
     color: antiquewhite;
 }
 
-.bottom-bar h4 {
+.bottom-bar h5 {
     font-weight   : 600;
     text-transform: uppercase;
 }
@@ -471,9 +476,9 @@ header {
 /*CONTACTO*/
 
 .contact {
-    background-color     : #242424;
-    font-family          : "Syne", sans-serif;
-    font-weight          : 800;
+    background-color: #242424;
+    font-family     : "Syne", sans-serif;
+    font-weight     : 800;
 }
 
 .wrapp {
@@ -797,6 +802,10 @@ input[type="number"]::-webkit-outer-spin-button {
         text-align: center;
     }
 
+    .bottom-bar h5 {
+        font-size: 1.2rem;
+    }
+
     .spacer {
         height: 200px;
     }
@@ -820,7 +829,7 @@ input[type="number"]::-webkit-outer-spin-button {
         top: 42%;
     }
 
-    .social-media{
+    .social-media {
         left: -.6em;
     }
 
@@ -849,8 +858,8 @@ input[type="number"]::-webkit-outer-spin-button {
     .box-title button {
         padding: 12px 30px;
     }
-    
-    .wrapp{
+
+    .wrapp {
         padding-top: 10px;
     }
 
@@ -862,7 +871,7 @@ input[type="number"]::-webkit-outer-spin-button {
         margin-bottom: 10px;
     }
 
-    .form-btn{
+    .form-btn {
         font-size: 12px;
     }
 }
