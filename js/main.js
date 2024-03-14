@@ -67,15 +67,15 @@ TweenMax.from(".row", 5, {
     ease: Expo.easeInOut,
 })
 
-TweenMax.from(".row h6", 6, {
-    delay: 4.5,
+TweenMax.from(".row h5", 6, {
+    delay: 4.2,
     opacity: 0,
     y: 40,
     ease: Expo.easeInOut,
 })
 
 TweenMax.from(".row p", 7, {
-    delay: 4.7,
+    delay: 4.5,
     opacity: 0,
     y: 20,
     ease: Expo.easeInOut,

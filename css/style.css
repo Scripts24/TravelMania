@@ -42,7 +42,7 @@ body {
     left          : 50%;
     transform     : translate(-50%, -50%);
     font-family   : "Cinzel", serif;
-    font-size     : 1.5rem;
+    font-size     : 30px;
     font-weight   : bold;
     letter-spacing: 12px;
     text-transform: uppercase;
@@ -728,6 +728,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @media (max-width: 768px) {
 
+    .overlay h1{
+        font-size: 20px;
+    }
+
     .wrapper .btn {
         display: block;
     }
@@ -803,7 +807,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 
     .bottom-bar h5 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .spacer {
