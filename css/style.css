@@ -61,7 +61,8 @@ header {
     width          : 100%;
     display        : flex;
     justify-content: space-between;
-    padding        : 30px 20px;
+    align-items: center;
+    padding        : 20px 20px;
 }
 
 .wrapper .logo {
@@ -108,7 +109,7 @@ header {
 
 .social-media ul li {
     color      : antiquewhite;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
 .social-media ul li i {
@@ -131,11 +132,12 @@ header {
     color         : antiquewhite;
     letter-spacing: 4px;
     font-family   : "Cinzel", serif;
+    font-weight: 600;
 }
 
 .box-title {
     position : absolute;
-    top      : 48%;
+    top      : 52%;
     left     : 46%;
     transform: translate(-50%, -50%);
 }
@@ -147,9 +149,10 @@ header {
 }
 
 .box-title p {
-    color         : rgba(43, 42, 39, 0.959);
-    font-weight   : 700;
+    color      : #000;
+    font-weight   : bold;
     letter-spacing: 3px;
+    font-size       : 24px;
 }
 
 .box-title button {
@@ -159,7 +162,7 @@ header {
     color           : black;
     letter-spacing  : 4px;
     font-weight     : 600;
-    font-size       : 12px;
+    font-size       : 18px;
 }
 
 /*NOSOTROS*/
@@ -660,7 +663,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .content-inner {
     width  : 100%;
     margin : 0 0 50px 0;
-    padding: 100px;
+    padding: 80px;
 }
 
 .fixed-footer {
@@ -683,7 +686,7 @@ input[type="number"]::-webkit-outer-spin-button {
     text-transform: uppercase;
     font-family   : "Cinzel", serif;
     font-weight   : 800;
-    font-size     : 0.8rem;
+    font-size     : 1rem;
     letter-spacing: 0.1px;
     line-height   : 30px;
 }
@@ -694,12 +697,11 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-wrap      : wrap;
     font-family    : "Cinzel", serif;
     text-transform : uppercase;
-    font-size      : 0.8rem;
+    font-size      :1rem;
     font-weight    : 600;
-    letter-spacing : 0.1px;
     line-height    : 30px;
-    opacity        : 0.5;
-    margin         : 3rem 0 0 0;
+    opacity        : 0.8;
+    margin         : 1rem 0 0 0;
 }
 
 /**---------------------------------------------------------------**/
