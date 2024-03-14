@@ -662,7 +662,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .content-inner {
     width  : 100%;
     margin : 0 0 50px 0;
-    padding: 80px;
+    padding: 50px;
 }
 
 .fixed-footer {
@@ -849,6 +849,10 @@ input[type="number"]::-webkit-outer-spin-button {
     .box-title button {
         padding: 12px 30px;
     }
+    
+    .wrapp{
+        padding-top: 10px;
+    }
 
     .form {
         margin-top: 20px;
@@ -856,5 +860,9 @@ input[type="number"]::-webkit-outer-spin-button {
 
     .form-item {
         margin-bottom: 10px;
+    }
+
+    .form-btn{
+        font-size: 12px;
     }
 }
