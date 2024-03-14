@@ -61,7 +61,7 @@ header {
     width          : 100%;
     display        : flex;
     justify-content: space-between;
-    align-items: center;
+    align-items    : center;
     padding        : 20px 20px;
 }
 
@@ -132,7 +132,7 @@ header {
     color         : antiquewhite;
     letter-spacing: 4px;
     font-family   : "Cinzel", serif;
-    font-weight: 600;
+    font-weight   : 600;
 }
 
 .box-title {
@@ -149,10 +149,10 @@ header {
 }
 
 .box-title p {
-    color      : #000;
+    color         : #000;
     font-weight   : bold;
     letter-spacing: 3px;
-    font-size       : 24px;
+    font-size     : 24px;
 }
 
 .box-title button {
@@ -177,13 +177,13 @@ header {
     color: antiquewhite;
 }
 
-.bottom-bar h6 {
+.bottom-bar h4 {
     font-weight   : 600;
     text-transform: uppercase;
 }
 
 .bottom-bar p {
-    font-size  : 14px;
+    font-size  : 16px;
     font-weight: lighter;
 }
 
@@ -474,7 +474,6 @@ header {
     background-color     : #242424;
     font-family          : "Syne", sans-serif;
     font-weight          : 800;
-    font-feature-settings: "pnum"on, "lnum"on;
 }
 
 .wrapp {
@@ -686,7 +685,7 @@ input[type="number"]::-webkit-outer-spin-button {
     text-transform: uppercase;
     font-family   : "Cinzel", serif;
     font-weight   : 800;
-    font-size     : 1rem;
+    font-size     : 1.2rem;
     letter-spacing: 0.1px;
     line-height   : 30px;
 }
@@ -697,10 +696,9 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-wrap      : wrap;
     font-family    : "Cinzel", serif;
     text-transform : uppercase;
-    font-size      :1rem;
+    font-size      : 1rem;
     font-weight    : 600;
     line-height    : 30px;
-    opacity        : 0.8;
     margin         : 1rem 0 0 0;
 }
 
@@ -730,7 +728,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 
     .wrapper .menu-btn {
-        color       : antiquewhite;
+        color: antiquewhite;
     }
 
     .wrapper .menu {
@@ -819,21 +817,25 @@ input[type="number"]::-webkit-outer-spin-button {
 
     .side-strip,
     .social-media {
-        top: 48%;
+        top: 42%;
     }
 
-    .side-strip{
-        font-size: 1.2rem;
-        right: -6em;
+    .social-media{
+        left: -.6em;
+    }
+
+    .side-strip {
+        font-size: 1.4rem;
+        right    : -6em;
     }
 
     .box-title {
-        top: 52%;
+        top: 48%;
     }
 
     .box-title p {
         letter-spacing: 3px;
-        font-size       : 18px;
+        font-size     : 18px;
     }
 
     .social-media ul li i {
