@@ -2,4 +2,4 @@
 ---
 ### Proyecto finalizado
 
-![Vista Previa](/img/vista-previa.mp4)
+![Vista Previa](./img/vista-previa.mp4)
