@@ -1,5 +1,6 @@
 ## Landing page GSAP animation
 ---
-### Proyecto finalizado
+### Proyecto finalizado: [Vista Previa](https://travel-mania-gules.vercel.app/)
 
-![Vista Previa](./img/vista-previa.mp4)
+---
+
